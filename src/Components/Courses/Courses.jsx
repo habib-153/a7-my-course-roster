@@ -16,7 +16,7 @@ const Courses = ({handleAddToCart}) => {
     return (
         
         <div className="md:w-[77%]">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-3 gap-3">
                 {
                 courses.map(course => <Course
                 key={course.id}
