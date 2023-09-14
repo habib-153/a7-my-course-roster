@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 
 import './App.css'
 import Courses from './Components/Courses/Courses'
@@ -16,7 +17,13 @@ function App() {
     let temp = course?.credit;
     let price = course?.price;
     if(isExist){
-      return alert("Already Added");
+      return Swal.fire({
+        icon: 'success',
+        title: 'You add this once before',
+        text: "You can't add course more than once.",
+        showConfirmButton: false,
+        timer: 2000
+      })
     }
     else{
       // setAddCourse([...courses, course]);
@@ -26,7 +33,11 @@ function App() {
       });
       const sum = 20 - temp;
       if(sum < 0){
-        return alert("Limit shes");
+        return Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        })
       }
       else{
         setAddCourse([...courses, course]);
