@@ -1,5 +1,9 @@
+/* eslint-disable react/prop-types */
 
-const Carts = () => {
+import Cart from "../Cart/Cart";
+
+
+const Carts = ({courses}) => {
     return (
         <div className="">
             <div className="bg-[#efefef] p-2 rounded-xl">
@@ -7,7 +11,11 @@ const Carts = () => {
                 <div>
                     <h3 className="font-bold text-lg my-2">Course Name</h3>
                     <div className="pb-2 border-b-2 text-[rgba(28,27,27,0.6)]">
-
+                        <ul>
+                        {
+                            courses.map((course, idx) =><li key={idx}><Cart course={course}></Cart></li>)
+                        }
+                        </ul>
                     </div>
                     <p className="py-2 text-[rgba(28,27,27,0.6)] font-semibold border-b-2">Total Credit Hour: </p>
                     <p className="py-2 text-[rgba(28,27,27,0.6)] font-semibold">Total Price: </p>

@@ -24,7 +24,9 @@ function App() {
         handleAddToCart={handleAddToCart}
         ></Courses>
 
-        <Carts></Carts>
+        <Carts
+        courses={courses}
+        ></Carts>
       </div>
     </div>
   )
