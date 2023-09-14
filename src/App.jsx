@@ -9,10 +9,12 @@ function App() {
   const [courses, setAddCourse] = useState([])
   const [addCredit, setAddCredit] = useState(0)
   const [remainingCredit, setRemainingCredit] = useState(20)
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleAddToCart = course => {
     const isExist = courses.find((item) => item.id == course.id)
     let temp = course?.credit;
+    let price = course?.price;
     if(isExist){
       return alert("Already Added");
     }
@@ -20,6 +22,7 @@ function App() {
       // setAddCourse([...courses, course]);
       courses.forEach((item)=>{
         temp += item.credit;
+        price += item.price;
       });
       const sum = 20 - temp;
       if(sum < 0){
@@ -29,6 +32,7 @@ function App() {
         setAddCourse([...courses, course]);
         setAddCredit(temp);
         setRemainingCredit(sum);
+        setTotalPrice(price);
       }
     }
     
@@ -47,6 +51,7 @@ function App() {
         courses={courses}
         addCredit={addCredit}
         remainingCredit={remainingCredit}
+        totalPrice={totalPrice}
         ></Carts>
       </div>
     </div>

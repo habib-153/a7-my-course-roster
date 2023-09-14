@@ -3,7 +3,7 @@
 import Cart from "../Cart/Cart";
 
 
-const Carts = ({courses, addCredit, remainingCredit}) => {
+const Carts = ({courses, addCredit, remainingCredit, totalPrice}) => {
     return (
         <div className="">
             <div className="bg-[#efefef] p-2 rounded-xl">
@@ -18,7 +18,7 @@ const Carts = ({courses, addCredit, remainingCredit}) => {
                         </ul>
                     </div>
                     <p className="py-2 text-[rgba(28,27,27,0.6)] font-semibold border-b-2">Total Credit Hour: {addCredit}</p>
-                    <p className="py-2 text-[rgba(28,27,27,0.6)] font-semibold">Total Price: </p>
+                    <p className="py-2 text-[rgba(28,27,27,0.6)] font-semibold">Total Price: {totalPrice}</p>
                 </div>
             </div>   
 
