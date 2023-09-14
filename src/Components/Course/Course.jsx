@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import {FaBookOpen, FaDollarSign } from 'react-icons/fa';
 
