@@ -40,7 +40,7 @@ function App() {
   
 
   return (
-    <div className='max-w-6xl mx-auto mt-4'>
+    <div className='max-w-6xl p-10 md:p-0 mx-auto mt-4'>
       <Header></Header>
       <div className='md:flex mt-4 gap-3'>
         <Courses
